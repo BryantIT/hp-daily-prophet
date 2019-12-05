@@ -1,3 +1,4 @@
+<div class="container">
 <h2 class="retro-font">Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -36,9 +37,10 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div>
+    <%= f.submit "Sign up"%>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
