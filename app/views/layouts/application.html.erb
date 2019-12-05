@@ -11,14 +11,17 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <style>
+
       body {
         font-family: 'Six+Caps', serif;
-        font-size: 20px;
-      }
+        font-size: 50px;
+        text-shadow: 1px 1px #f7f5f0;
     </style>
   </head>
 
   <body>
+    <%= render 'layouts/nav' %>
+    <div class="halo"></div>
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,44 @@
+#menu-outer {
+	height: 84px;
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+ul#horizontal-list {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 12px;
+	}
+	ul#horizontal-list li {
+		display: inline;
+    position: relative;
+    z-index: 100;
+	}
+
+  a:link, a:visited {
+color: white;
+
+text-align: center;
+text-decoration: none;
+display: inline-block;
+}
+
+a:hover, a:active {
+  text-shadow: 4px 4px 4px #43b3fb;
+}
+
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.back {
+  position: absolute;
+  z-index: 100;
+}

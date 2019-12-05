@@ -1,0 +1,20 @@
+<div class="sticky" >
+  <div class="back">
+    <%= image_tag("ribbonfinal.png", :alt => "ribbon", style: "width:100%") %>
+  </div>
+  <div id="menu-outer">
+    <div class="table">
+      <ul id="horizontal-list">
+        <% if user_signed_in? %>
+          <li class="retro-font">Newsletters&nbsp;&loz;&nbsp;</li>
+          <li class="retro-font">Mailing List&nbsp;&loz;&nbsp;</li>
+          <li class="retro-font"><%= link_to "Edit Profile", edit_user_registration_path %>&nbsp;&loz;&nbsp;</li>
+          <li class="retro-font"><%= link_to "Logout", destroy_user_session_path, method: "delete" %></li>
+          <% else %>
+          <li class="retro-font">New User&nbsp;&loz;&nbsp;</li>
+          <li class="retro-font"><%= link_to "Log In", new_user_session_path %>&nbsp;&loz;&nbsp;</li>
+          <% end %>
+        </ul>
+      </div>
+  </div>
+</div>

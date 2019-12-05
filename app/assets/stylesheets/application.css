@@ -17,6 +17,7 @@
 .retro-font{
   font-family: 'Satisfy', serif;
   font-size: 40px;
+  text-shadow: 4px 4px 4px #aaa;
 }
 
 
@@ -31,6 +32,7 @@
  -webkit-border-radius: 100px;
  -moz-border-radius: 100px;
  border: 2px solid blue;
+ 
 
 }
 
