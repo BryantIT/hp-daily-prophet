@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :articles
   resources :newsletters
   root to: 'application#welcome'
   devise_for :users, path: 'users', :controllers => {registrations: 'registrations'},
