@@ -13,7 +13,66 @@
  *= require_tree .
  *= require_self
  */
- 
+
+ @keyframes bg {
+    0% {
+        background-size:    0 3px,
+                            3px 0,
+                            0 3px,
+                            3px 0;
+    }
+    25% {
+        background-size:    100% 3px,
+                            3px 0,
+                            0 3px,
+                            3px 0;
+    }
+    50% {
+        background-size:    100% 3px,
+                            3px 100%,
+                            0 3px,
+                            3px 0;
+    }
+    75% {
+        background-size:    100% 3px,
+                            3px 100%,
+                            100% 3px,
+                            3px 0;
+    }
+    100% {
+        background-size:    100% 3px,
+                            3px 100%,
+                            100% 3px,
+                            3px 100%;
+    }
+}
+
+p {
+    width: 25%;
+    margin: 2rem auto;
+    padding: 2em;
+
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, #282525 100%, #282525 100%),
+                        linear-gradient(to bottom, #282525 100%, #282525 100%),
+                        linear-gradient(to right, #282525 100%, #282525 100%),
+                        linear-gradient(to bottom, #282525 100%, #282525 100%);
+    background-size:    100% 3px,
+                        3px 100%,
+                        100% 3px,
+                        3px 100%;
+    background-position:    0 0,
+                            100% 0,
+                            100% 100%,
+                            0 100%;
+    animation: bg 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
+    animation-play-state: paused;
+}
+
+p:hover {
+    animation-play-state: running;
+
+}
 
  author{
  	max-width: 500px;
@@ -119,6 +178,7 @@ body {
 }
 
 .vintage__container {
+  padding-top: 5%;
   display: inline-block;
   margin: 25px auto 40px;
 }

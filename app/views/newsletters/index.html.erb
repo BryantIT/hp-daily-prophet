@@ -1,11 +1,13 @@
 
+<div class="vintage__container">
 
-<% @newsletters.each do |n| %>
-<h2>
-  <%= n.title %> - <%= n.sub_title %> -
-  <%= link_to "Review", newsletter_path(n.id) %>
-</h2>
+  <% @newsletters.each do |n| %>
+  <h2>
+    <%= n.title %> - <%= n.sub_title %> -
+    <%= link_to "Review", newsletter_path(n.id) %>
+  </h2>
 
-<% end %>
+  <% end %>
 
-<li class="retro-font-last"><%= link_to "Create New", new_newsletter_path %></li>
+  <li class="retro-font-last"><%= link_to "Create New", new_newsletter_path %></li>
+  </div>

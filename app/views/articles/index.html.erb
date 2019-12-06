@@ -1,0 +1,9 @@
+<% @articles.each do |n| %>
+<h2>
+  <%= n.title %> - <%= n.byline %> - <%= image_tag url_for(n.photo), :class=> "edit-box" %>
+  <%= link_to "Review", article_path(n.id) %>
+</h2>
+
+<% end %>
+
+<li class="retro-font-last"><%= link_to "Create New", new_article_path %></li>

@@ -17,7 +17,6 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    @article.build_newsletter
     @article.byline = current_user.last_name
 
     if @article.save
