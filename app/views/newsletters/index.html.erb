@@ -1,0 +1,11 @@
+<h1>Index Page</h1>
+
+<% @newsletters.each do |n| %>
+<h2>
+  <%= n.title %> - <%= n.sub_title %> -
+  <%= link_to "Review", newsletter_path(n.id) %>
+</h2>
+
+<% end %>
+
+<li class="retro-font-last"><%= link_to "Create New", new_newsletter_path %></li>

@@ -6,6 +6,7 @@
     <div class="table">
       <ul id="horizontal-list">
         <% if user_signed_in? %>
+          <li class="retro-font"><%= link_to "Home", root_path %></li>
           <li class="retro-font"><%= link_to "Newsletters", newsletters_path %></li>
           <li class="retro-font">Mailing List</li>
           <li class="retro-font"><%= link_to "Edit Profile", edit_user_registration_path %></li>

@@ -9,7 +9,7 @@ class NewslettersController < ApplicationController
   end
 
   def create
-    @newsletter = Newsletter.create(newsletter_params)
+    @newsletter = current_user.newsletters.build(newsletter_params)
     @newsletter.user_id = current_user.id
 
     if @newsletter.save
@@ -20,8 +20,15 @@ class NewslettersController < ApplicationController
   end
 
   def show
-    
     @newsletter = Newsletter.find_by_id(params[:id])
+  end
+
+  def edit
+    @newsletter = Newsletter.find_by_id(params[:id])
+  end
+
+  def update
+
   end
 
 

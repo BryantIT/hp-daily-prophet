@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+ 
+
  author{
  	max-width: 500px;
  	display: block;
@@ -71,12 +73,16 @@
 @import url(https://fonts.googleapis.com/css?family=Six+Caps);
 
 body {
-  background: url(http://api.thumbr.it/whitenoise-361x370.png?background=15424fff&noise=166f9e&density=100&opacity=61);
+  background: url(https://cdn.pixabay.com/photo/2016/06/20/13/44/paper-1468883_960_720.jpg)no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   text-align: center;
 }
 
 .halo {
-  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.4));
+  background-image: radial-gradient(transparent, rgba(10, 0, 0, .5));
   bottom: 0;
   left: 0;
   position: fixed;
