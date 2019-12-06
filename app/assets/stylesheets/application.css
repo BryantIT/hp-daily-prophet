@@ -160,6 +160,7 @@ body {
 }
 
 .intro--the {
+  padding-top: 3%;
   transform: rotate(-10deg) translate(-20px, 15px);
 }
 
@@ -178,7 +179,7 @@ body {
 }
 
 .vintage__container {
-  padding-top: 5%;
+  padding-top: 10%;
   display: inline-block;
   margin: 25px auto 40px;
 }
