@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :articles
   resources :newsletters
   root to: 'application#welcome'
-  devise_for :users, path: 'users', :controllers => {registrations: 'registrations'},
+  devise_for :users, path: 'users', :controllers => {registrations: 'registrations', omniauth_callbacks: 'callbacks'},
   :path_names => {
     :sign_in => 'login',
     :sign_out => 'logout',

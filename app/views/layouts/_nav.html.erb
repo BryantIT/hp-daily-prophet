@@ -12,7 +12,7 @@
           <li class="retro-font"><%= link_to "Edit Profile", edit_user_registration_path %></li>
           <li class="retro-font-last"><%= link_to "Logout", destroy_user_session_path, method: "delete" %></li>
           <% else %>
-          <li class="retro-font">New User</li>
+          <li class="retro-font"><%= link_to "New User", new_user_registration_path %></li>
           <li class="retro-font-last"><%= link_to "Log In", new_user_session_path %></li>
           <% end %>
         </ul>

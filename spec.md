@@ -1,5 +1,10 @@
 # Specifications for the Rails Assessment
 
+AIzaSyBzL4Bd9ayLBJf28pllMGFUGxJnX1UClUg
+
+759071275169-rvlnra6qk1em9vaf6o72skrvtgdfoqnq.apps.googleusercontent.com
+<!-- _6wbVZcM49gETpxFoh4PUMwQ -->
+
 Specs:
 - [x] Using Ruby on Rails for the project
 - [ ] Include at least one has_many relationship (x has_many y; e.g. User has_many Recipes)
