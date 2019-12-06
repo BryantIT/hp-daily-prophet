@@ -1,0 +1,41 @@
+<div class="container">
+  <%= form_for(@newsletter) do |f| %>
+
+  <div class="field">
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub_title %><br/>
+    <%= f.text_field :sub_title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :summary %><br/>
+    <%= f.text_area :summary, cols: 30, rows: 10%>
+  </div>
+
+  <div class="field">
+    <%= f.label :publish_date %><br/>
+    <%= f.datetime_field :publish_date %>
+  </div>
+
+  <div class="main">
+  <button class="button">Create</button>
+
+
+  <div class="loader">
+    <div class="check">
+      <span class="check-one"></span>
+      <span class="check-two"></span>
+    </div>
+  </div>
+
+</div>
+
+  <div>
+    <%= f.submit "Create Newsletter"%>
+  </div>
+<% end %>
+</div>
