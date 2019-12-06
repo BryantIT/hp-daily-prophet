@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
 has_one_attached :avatar
 has_many :newsletters
+has_many :articles, through: :newsletters
 end
