@@ -19,6 +19,11 @@ class NewslettersController < ApplicationController
     end
   end
 
+  def show
+    
+    @newsletter = Newsletter.find_by_id(params[:id])
+  end
+
 
   private
   def newsletter_params

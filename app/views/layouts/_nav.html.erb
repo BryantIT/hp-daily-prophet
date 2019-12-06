@@ -6,13 +6,13 @@
     <div class="table">
       <ul id="horizontal-list">
         <% if user_signed_in? %>
-          <li class="retro-font"><%= link_to "Newsletters", newsletters_path %>&nbsp;&loz;&nbsp;</li>
-          <li class="retro-font">Mailing List&nbsp;&loz;&nbsp;</li>
-          <li class="retro-font"><%= link_to "Edit Profile", edit_user_registration_path %>&nbsp;&loz;&nbsp;</li>
-          <li class="retro-font"><%= link_to "Logout", destroy_user_session_path, method: "delete" %></li>
+          <li class="retro-font"><%= link_to "Newsletters", newsletters_path %></li>
+          <li class="retro-font">Mailing List</li>
+          <li class="retro-font"><%= link_to "Edit Profile", edit_user_registration_path %></li>
+          <li class="retro-font-last"><%= link_to "Logout", destroy_user_session_path, method: "delete" %></li>
           <% else %>
-          <li class="retro-font">New User&nbsp;&loz;&nbsp;</li>
-          <li class="retro-font"><%= link_to "Log In", new_user_session_path %>&nbsp;&loz;&nbsp;</li>
+          <li class="retro-font">New User</li>
+          <li class="retro-font-last"><%= link_to "Log In", new_user_session_path %></li>
           <% end %>
         </ul>
       </div>

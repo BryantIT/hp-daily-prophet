@@ -13,8 +13,27 @@
  *= require_tree .
  *= require_self
  */
+ author{
+ 	max-width: 500px;
+ 	display: block;
+ 	margin: 0 auto;
+ 	text-align: right;
+ 	opacity: .4;
+ }
 
 .retro-font{
+  font-family: 'Satisfy', serif;
+  font-size: 40px;
+  text-shadow: 4px 4px 4px #aaa;
+
+}
+.retro-font:after{
+  content: "\25ca";
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.retro-font-last{
   font-family: 'Satisfy', serif;
   font-size: 40px;
   text-shadow: 4px 4px 4px #aaa;
