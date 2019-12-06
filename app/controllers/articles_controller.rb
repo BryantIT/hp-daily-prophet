@@ -3,17 +3,22 @@ class ArticlesController < ApplicationController
     if @newsletter = Newsletter.find_by_id(params[:newsletter_id])
         @articles = @newsletter.articles.all
     else
-        @articles = Review.all
-
+        @articles = Article.all
+    end
   end
 
   def new
-    @article = Article.new
+    if @newsletter = Newsletter.find_by_id(params[:newsletter_id])
+        @article = @newsletter.articles.build
+    else
+        @article = Article.new
+    end
   end
 
   def create
-    @article = current_user.articles.build(article_params)
-    @article.user_id = current_user.id
+    @article = Article.new(article_params)
+    @article.build_newsletter
+    @article.byline = current_user.last_name
 
     if @article.save
       redirect_to @article
@@ -47,5 +52,4 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:title, :byline, :body, :newsletter_id, :photo)
   end
-end
 end
