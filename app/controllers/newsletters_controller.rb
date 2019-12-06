@@ -28,7 +28,15 @@ class NewslettersController < ApplicationController
   end
 
   def update
+    @newsletter = Newsletter.find_by_id(params[:id])
+    @newsletter.update(newsletter_params)
+    redirect_to newsletter_path(@newsletter)
+  end
 
+  def destroy
+    @newsletter = Newsletter.find_by_id(params[:id])
+    @newsletter.destroy
+    redirect_to newsletters_path
   end
 
 

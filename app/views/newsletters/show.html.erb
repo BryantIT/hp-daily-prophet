@@ -5,4 +5,7 @@
   <p><%= @newsletter.summary %></p>
   <author>Author Name</author>
 
-  <li class="retro-font-last"><%= link_to "Edit", edit_newsletter_path %></li>
+  <span class="retro-font-last"><%= link_to "Edit", edit_newsletter_path %> - </span>
+  <span class="retro-font-last"><%= link_to "Delete", newsletter_path(@newsletter),
+                         :data => {:confirm => "Are you sure?",
+                                   :method => "delete"} %></span>
