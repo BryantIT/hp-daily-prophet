@@ -26,20 +26,20 @@
 #     )
 # end
 
-# 10.times do
-#     Article.create(
-#       title: Faker::Book.title,
-#       byline: Faker::Name.name,
-#       body: Faker::Lorem.paragraph(sentence_count: 4),
-#       newsletter_id: rand(10..17),
-#     )
-# end
-
 10.times do
-    Event.create(
+    Article.create(
       title: Faker::Book.title,
+      byline: Faker::Name.name,
       body: Faker::Lorem.paragraph(sentence_count: 4),
-      date: Faker::Date.backward(days: 14),
       newsletter_id: rand(10..17),
     )
 end
+
+# 10.times do
+#     Event.create(
+#       title: Faker::Book.title,
+#       body: Faker::Lorem.paragraph(sentence_count: 4),
+#       date: Faker::Date.backward(days: 14),
+#       newsletter_id: rand(10..17),
+#     )
+# end
