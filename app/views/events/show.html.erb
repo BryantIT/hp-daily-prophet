@@ -1,0 +1,12 @@
+<h1><%= @event.title %></h1>
+<p><%= @event.body %></p>
+<author>--<%= @event.byline %></author>
+
+<span class="retro-font"><%= link_to "Edit", edit_event_path %></span>
+<span class="retro-font-last"><%= link_to "Delete", event_path(@event),
+                       :data => {:confirm => "Are you sure?",
+                                 :method => "delete"} %></span>
+
+    <ul id="horizontal-list">
+      <li class="retro-font-last"><%= link_to "Events", events_path %></li>
+     </ul>
