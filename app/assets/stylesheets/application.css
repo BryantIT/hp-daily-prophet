@@ -179,7 +179,7 @@ body {
 }
 
 .vintage__container {
-  padding-top: 10%;
+  padding-top: 3%;
   display: inline-block;
   margin: 25px auto 40px;
 }
@@ -204,6 +204,7 @@ body {
 }
 
 .vintage__bot {
+
   text-shadow:
     2px 1px rgb(85, 10, 0),
     4px 2px rgb(90, 15, 5),
