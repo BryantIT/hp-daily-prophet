@@ -123,6 +123,8 @@ p:hover {
 }
 
 .edit-box {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
   border: 1px solid blue;
   border-radius: 4px;
   width: 100px;

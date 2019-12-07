@@ -1,7 +1,6 @@
 <h1><%= @article.title %></h1>
-<h2><%= @article.byline %></h2>
 <p><%= @article.body %></p>
-<author>Author Name</author>
+<author>--<%= @article.byline %></author>
 
 <span class="retro-font"><%= link_to "Edit", edit_article_path %></span>
 <span class="retro-font-last"><%= link_to "Delete", article_path(@article),

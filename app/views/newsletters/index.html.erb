@@ -2,10 +2,10 @@
 <div class="vintage__container">
 
   <% @newsletters.each do |n| %>
-  <h2>
-    <%= n.title %> - <%= n.sub_title %> -
+  <ul>
+    * <%= n.title %> - <%= n.sub_title %> -
     <%= link_to "Review", newsletter_path(n.id) %>
-  </h2>
+  </ul>
 
   <% end %>
   <ul id="horizontal-list">
