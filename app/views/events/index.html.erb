@@ -2,11 +2,7 @@
 
   <% @articles.each do |n| %>
   <h2>
-    <%= n.newsletter.title %> -
-    Edition: <%= n.newsletter.sub_title %> -
-    <%= n.title %> -
-    Author: <%= n.byline %> -
-    <%= image_tag url_for(n.photo), :class=> "edit-box" %>
+    <%= n.title %> - <%= n.byline %> - <%= image_tag url_for(n.photo), :class=> "edit-box" %>
     <%= link_to "Review", article_path(n.id) %>
   </h2>
 

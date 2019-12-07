@@ -15,7 +15,7 @@
 
   <div class="field">
     <%= f.label :newsletter %><br>
-    <%= f.collection_select :newsletter_id, Newsletter.all, :id, :sub_title, include_blank: "Newsletter"  -%>
+    <%= f.collection_select :newsletter_id, Newsletter.all, :id, :title, include_blank: "Newsletter"  -%>
   </div>
 
   <div class="field">
