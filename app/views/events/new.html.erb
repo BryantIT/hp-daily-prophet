@@ -10,7 +10,7 @@
     <%= f.text_field :title %>
   </div>
 
-  
+  <small>Written by: <%= current_user.print_name %></small><br>
 
   <div class="field">
     <%= f.label :body %><br/>

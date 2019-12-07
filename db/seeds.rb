@@ -39,6 +39,7 @@
     Event.create(
       title: Faker::Book.title,
       body: Faker::Lorem.paragraph(sentence_count: 4),
+      date: Faker::Date.backward(days: 14),
       newsletter_id: rand(10..17),
     )
 end
