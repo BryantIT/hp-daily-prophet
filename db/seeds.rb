@@ -34,3 +34,11 @@
 #       newsletter_id: rand(10..17),
 #     )
 # end
+
+10.times do
+    Event.create(
+      title: Faker::Book.title,
+      body: Faker::Lorem.paragraph(sentence_count: 4),
+      newsletter_id: rand(10..17),
+    )
+end
