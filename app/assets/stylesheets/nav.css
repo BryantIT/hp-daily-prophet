@@ -42,3 +42,51 @@ div.sticky {
   position: absolute;
   z-index: 100;
 }
+
+/* Drop down function */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+	z-index: 100;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+	background: #1D4350;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+/* drop down menu style */
+
+.drop{
+  font-family: 'Satisfy', serif;
+  font-size: 30px;
+  text-shadow: 4px 4px 4px #aaa;
+}

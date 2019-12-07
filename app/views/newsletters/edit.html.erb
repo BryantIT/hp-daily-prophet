@@ -1,5 +1,8 @@
-<div class="container">
+
   <%= form_for(@newsletter) do |f| %>
+
+  <h3 class="retro-font-last">Edit<br>
+     <%= @newsletter.title %></h3>
 
   <div class="field">
     <%= f.label :title %><br/>
@@ -36,4 +39,3 @@
 
 
 <% end %>
-</div>

@@ -1,0 +1,16 @@
+.edit-box {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+  border: 1px solid blue;
+  border-radius: 4px;
+  width: 100px;
+}
+
+.show-box {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+  border: 1px solid blue;
+  border-radius: 4px;
+  max-width: 200px;
+  max-height: 200px;
+}

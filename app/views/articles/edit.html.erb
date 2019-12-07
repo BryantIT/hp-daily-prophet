@@ -1,41 +1,13 @@
-<div class="container">
-  <%= form_for(@article) do |f| %>
 
-  <div class="field">
-    <%= f.label :title %><br/>
-    <%= f.text_field :title %>
-  </div>
+<h3 class="retro-font-last">Edit<br>
+  <%= @article.title %></h3>
 
-  <h3>by: <%= @article.byline %></h3><br>
-
-  <div class="field">
-    <%= f.label :body %><br/>
-    <%= f.text_area :body, cols: 30, rows: 10%>
-  </div>
-
-  <div class="field">
-    <%= f.label :newsletter %><br>
-    <%= f.collection_select :newsletter_id, Newsletter.all, :id, :sub_title, include_blank: "Newsletter"  -%>
-  </div>
-
-  <div class="field">
-    <%= f.label :photo %><br/>
-    <%= f.file_field :photo %>
-  </div>
-
-  <div class="main">
-  <button class="button">Create</button>
-
-
-  <div class="loader">
-    <div class="check">
-      <span class="check-one"></span>
-      <span class="check-two"></span>
+  <div>
+    <% if @article.photo.attached? %>
+    <%= image_tag url_for(@article.photo), :class=> "edit-box" %>
+    <% else %>
+    <h3>No Photo</h3>
+    <% end %>
     </div>
-  </div>
 
-</div>
-
-
-<% end %>
-</div>
+<%= render partial: "form" %>

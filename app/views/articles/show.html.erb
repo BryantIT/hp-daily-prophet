@@ -1,4 +1,13 @@
+<h3 class="retro-font-last">Articles</h3>
+
 <h1><%= @article.title %></h1>
+
+  <% if @article.photo.attached? %>
+    <%= image_tag url_for(@article.photo), :class=> "show-box" %>
+  <% else %>
+    <h3>No Photo</h3>
+  <% end %>
+
 <p><%= @article.body %></p>
 <author>--<%= @article.byline %></author>
 

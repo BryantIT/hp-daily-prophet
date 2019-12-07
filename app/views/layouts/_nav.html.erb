@@ -1,4 +1,4 @@
-<div class="sticky" >
+<div class="sticky">
   <div class="back">
     <%= image_tag("ribbonfinal.png", :alt => "ribbon", style: "width:100%") %>
   </div>
@@ -6,16 +6,44 @@
     <div class="table">
       <ul id="horizontal-list">
         <% if user_signed_in? %>
-          <li class="retro-font"><%= link_to "Home", root_path %></li>
-          <li class="retro-font"><%= link_to "Newsletters", newsletters_path %></li>
-          <li class="retro-font">Mailing List</li>
-          <li class="retro-font"><%= link_to "Edit Profile", edit_user_registration_path %></li>
-          <li class="retro-font-last"><%= link_to "Logout", destroy_user_session_path, method: "delete" %></li>
-          <% else %>
+
+        <li class="retro-font"><%= link_to "Home", root_path %></li>
+
+          <!-- Newsletters Drop Down -->
+          <div class="dropdown">
+            <li class="retro-font"><%= link_to "Content", newsletters_path %></li>
+            <div class="dropdown-content">
+                <li class="drop"><%= link_to "Newsletters", newsletters_path %></li>
+              <li class="drop"><%= link_to "Articles", articles_path %></li>
+              <li class="drop"><%= link_to "Events", events_path %></li>
+              <!-- Announcements -->
+              <!-- Ads -->
+            </div>
+          </div>
+
+          <!-- Mailing List Drop Down -->
+          <div class="dropdown">
+            <li class="retro-font">Mailing List</li>
+            <div class="dropdown-content">
+              <!-- ??? -->
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <li class="retro-font-last"><%= link_to "Profile", edit_user_registration_path %></li>
+            <div class="dropdown-content">
+              <li class="drop"><%= link_to "Edit", edit_user_registration_path %></li>
+              <li class="drop"><%= link_to "Logout", destroy_user_session_path, method: "delete" %></li>
+              <!-- ??? -->
+            </div>
+          </div>
+
+
+        <% else %>
           <li class="retro-font"><%= link_to "New User", new_user_registration_path %></li>
           <li class="retro-font-last"><%= link_to "Log In", new_user_session_path %></li>
-          <% end %>
-        </ul>
-      </div>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>

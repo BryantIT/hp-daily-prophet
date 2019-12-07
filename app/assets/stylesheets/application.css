@@ -100,7 +100,6 @@ p:hover {
   text-shadow: 4px 4px 4px #aaa;
 }
 
-
  .circular-img{
  object-fit: cover;
  object-position: top;
@@ -122,15 +121,7 @@ p:hover {
 
 }
 
-.edit-box {
-  -webkit-filter: sepia(100%);
-  filter: sepia(100%);
-  border: 1px solid blue;
-  border-radius: 4px;
-  width: 100px;
 
-
-}
 
 @import url(https://fonts.googleapis.com/css?family=Satisfy);
 @import url(https://fonts.googleapis.com/css?family=Six+Caps);
