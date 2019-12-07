@@ -1,12 +1,16 @@
 <div class="container">
-  <%= form_for(@article) do |f| %>
+  <%= form_for(@event) do |f| %>
+
+
+    <h3 class="retro-font-last">Events</h3>
+
 
   <div class="field">
-    <%= f.label :title %><br/>
+    <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
 
-  <span>by: <%= current_user.last_name %></span>
+  <small>Written by: <%= current_user.print_name %></small><br>
 
   <div class="field">
     <%= f.label :body %><br/>
@@ -15,7 +19,7 @@
 
   <div class="field">
     <%= f.label :newsletter %><br>
-    <%= f.collection_select :newsletter_id, Newsletter.all, :id, :title, include_blank: "Newsletter"  -%>
+    <%= f.collection_select :newsletter_id, Newsletter.all, :id, :sub_title, include_blank: "Newsletter"  -%>
   </div>
 
   <div class="field">

@@ -18,4 +18,16 @@ has_many :events, through: :articles
       user.password = Devise.friendly_token[0,20]
     end
   end
+
+  def full_name
+    @full_name = "#{self.first_name} #{self.last_name}"
+  end
+
+  def initials
+     @initials = "#{self.first_name[0]}.#{self.last_name[0]}."
+  end
+
+  def print_name
+    @print_name = "#{self.first_name[0]}. #{self.last_name}"
+  end
 end

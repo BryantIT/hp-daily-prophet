@@ -1,12 +1,21 @@
 <div class="vintage__container">
 
-  <% @articles.each do |n| %>
-  <h2>
-    <%= n.title %> - <%= n.byline %> - <%= image_tag url_for(n.photo), :class=> "edit-box" %>
-    <%= link_to "Review", article_path(n.id) %>
-  </h2>
+  <% @events.each do |n| %>
+  <ul>
+    * <%= n.newsletter.title %> -
+    Edition: <%= n.newsletter.sub_title %> -
+    <%= n.title %> -
+    Author: <%= n.date %> -
+    <% if n.photo.attached? %>
+      <%= image_tag url_for(n.photo), :class=> "edit-box" %>
+    <% else %>
+      <div>No Image</div>
+    <% end %>
+    <%= link_to "Review", event_path(n.id) %>
+
+  </ul>
 
   <% end %>
 
-  <li class="retro-font-last"><%= link_to "Create New", new_article_path %></li>
+  <li class="retro-font-last"><%= link_to "Create New", new_event_path %></li>
   </div>
