@@ -1,10 +1,19 @@
-<div class="container">
-<h2 class="retro-font">Sign up</h2>
+<h2 class="retro-font-last">Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="signup">
+  <div class="signup-connect">
+    <h1>Create your account</h1>
+    <a href="#" class="btn btn-social btn-facebook"><i class="fa fa-facebook"></i> Sign in with Facebook</a>
+    <a href="#" class="btn btn-social btn-twitter"><i class="fa fa-twitter"></i> Sign in with Twitter</a>
+    <a href="#" class="btn btn-social btn-google"><i class="fa fa-google"></i> Sign in with Google</a>
+    <a href="#" class="btn btn-social btn-linkedin"><i class="fa fa-linkedin"></i> Sign in with Linkedin</a>
+  </div>
+  <div class="signup-classic">
+    <h1>Or use the classical way</h1>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
+  <div class="form">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name %>
   </div>
@@ -41,7 +50,5 @@
     <%= f.submit "Sign up"%>
   </div>
 <% end %>
-<div>
-  <%= render "devise/shared/links" %>
-  </div>
+</div>
 </div>

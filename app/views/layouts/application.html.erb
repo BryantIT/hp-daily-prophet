@@ -6,7 +6,8 @@
     <%= csp_meta_tag %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <meta name="google-signin-client_id" content="759071275169-rvlnra6qk1em9vaf6o72skrvtgdfoqnq.apps.googleusercontent.com">
+
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Satisfy"
     href="https://fonts.googleapis.com/css?family=Six+Caps">
@@ -26,5 +27,7 @@
     <%= render 'layouts/nav' %>
     <div class="halo"></div>
     <%= yield %>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
   </body>
 </html>
