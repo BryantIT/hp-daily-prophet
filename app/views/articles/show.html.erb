@@ -2,14 +2,17 @@
 
 <h1><%= @article.title %></h1>
 
-<% if @article.photo.attached? %>
-  <%= image_tag url_for(@article.photo), :class=> "show-box" %>
-<% else %>
-  <h3>No Photo</h3>
-<% end %>
 
 <p><%= @article.body %></p>
 <author>--<%= @article.byline %></author>
+
+<div>
+  <% if @article.photo.attached? %>
+  <%= image_tag url_for(@article.photo), :class=> "show-box" %>
+  <% else %>
+  <h3>No Photo</h3>
+  <% end %>
+</div>
 
 <span class="retro-font"><%= link_to "Edit", edit_article_path %></span>
 <span class="retro-font-last"><%= link_to "Delete", article_path(@article),
