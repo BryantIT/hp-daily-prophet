@@ -2,20 +2,14 @@
 
 <h1><%= @article.title %></h1>
 
-  <% if @article.photo.attached? %>
-    <%= image_tag url_for(@article.photo), :class=> "show-box" %>
-  <% else %>
-    <h3>No Photo</h3>
-  <% end %>
+<% if @article.photo.attached? %>
+  <%= image_tag url_for(@article.photo), :class=> "show-box" %>
+<% else %>
+  <h3>No Photo</h3>
+<% end %>
 
 <p><%= @article.body %></p>
 <author>--<%= @article.byline %></author>
 
 <span class="retro-font"><%= link_to "Edit", edit_article_path %></span>
-<span class="retro-font-last"><%= link_to "Delete", article_path(@article),
-                       :data => {:confirm => "Are you sure?",
-                                 :method => "delete"} %></span>
-
-    <ul id="horizontal-list">
-      <li class="retro-font-last"><%= link_to "Articles", articles_path %></li>
-     </ul>
+<span class="retro-font-last"><%= link_to "Delete", article_path(@article), :data => {:confirm => "Are you sure?", :method => "delete"} %></span>

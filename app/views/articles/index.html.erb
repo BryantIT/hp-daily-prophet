@@ -3,15 +3,14 @@
 <div class="vintage__container">
 
   <a name="top"></a>
+
   <% @articles.each do |n| %>
-  <ul>
-    * <%= n.newsletter.title %> -
-    Edition: <%= n.newsletter.sub_title %> -
-    <%= n.title %> -
-    Author: <%= n.byline %> -
+    <ul>
+      * <%= n.newsletter.title %> -
+      Edition: <%= n.newsletter.sub_title %> -
+      <%= n.title %> -
+      Author: <%= n.byline %> -
 
-    <%= link_to "Review", article_path(n.id) %>
-
-  </ul>
-
+      <%= link_to "Review", article_path(n.id) %>
+    </ul>
   <% end %>

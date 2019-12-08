@@ -1,20 +1,18 @@
 <%= form_for(@article) do |f| %>
 
 <div class="field">
-  <%= f.label :title %><br/>
+  <%= f.label :title %><br>
   <%= f.text_field :title%>
 </div>
 
 <% if @article.byline? %>
-  <span>by:
-    <%= @article.byline %></span><br>
+  <span>by: <%= @article.byline %></span><br>
 <% else %>
-  <span>by:
-    <%= current_user.last_name %></span>
+  <span>by: <%= current_user.last_name %></span>
 <% end %>
 
 <div class="field">
-  <%= f.label :body %><br/>
+  <%= f.label :body %><br>
   <%= f.text_area :body, cols: 30, rows: 10%>
 </div>
 
