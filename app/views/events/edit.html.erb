@@ -1,46 +1,12 @@
-<div class="container">
-  <%= form_for(@event) do |f| %>
+<h3 class="retro-font-last">Edit<br>
+  <%= @event.title %></h3>
 
-  <div class="field">
-    <%= f.label :title %><br/>
-    <%= f.text_field :title %>
-  </div>
-
-  <h3>by: <%= @event.date %></h3><br>
-
-  <div class="field">
-    <%= f.label :body %><br/>
-    <%= f.text_area :body, cols: 30, rows: 10%>
-  </div>
-
-  <div class="field">
-    <%= f.label :newsletter %><br>
-    <%= f.collection_select :newsletter_id, Newsletter.all, :id, :sub_title, include_blank: "Newsletter"  -%>
-  </div>
-
-  <div class="field">
-    <%= f.label :photo %><br/>
-    <%= f.file_field :photo %>
-  </div>
-
-  <div class="field">
-    <%= f.label :date %><br/>
-    <%= f.date_field :date %>
-  </div>
-
-  <div class="main">
-  <button class="button">Create</button>
-
-
-  <div class="loader">
-    <div class="check">
-      <span class="check-one"></span>
-      <span class="check-two"></span>
-    </div>
-  </div>
-
+<div>
+  <% if @event.photo.attached? %>
+    <%= image_tag url_for(@event.photo), :class=> "edit-box" %>
+  <% else %>
+    <h3>No Photo</h3>
+  <% end %>
 </div>
 
-
-<% end %>
-</div>
+<%= render partial: "form" %>

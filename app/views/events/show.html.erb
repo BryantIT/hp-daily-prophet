@@ -1,12 +1,19 @@
+<%= render partial: "nav" %>
+
 <h1><%= @event.title %></h1>
+<div><%= event_date %></div>
+
+<% if @event.photo.attached? %>
+  <%= image_tag url_for(@event.photo), :class=> "show-box" %>
+<% else %>
+  <h3>No Photo</h3>
+<% end %>
+
 <p><%= @event.body %></p>
-<author>--<%= @event.byline %></author>
+
+
 
 <span class="retro-font"><%= link_to "Edit", edit_event_path %></span>
 <span class="retro-font-last"><%= link_to "Delete", event_path(@event),
                        :data => {:confirm => "Are you sure?",
-                                 :method => "delete"} %></span>
-
-    <ul id="horizontal-list">
-      <li class="retro-font-last"><%= link_to "Events", events_path %></li>
-     </ul>
+                       :method => "delete"} %></span>

@@ -18,4 +18,6 @@ class Newsletter < ApplicationRecord
   def sort_by_author
     # sorth by author
   end
+
+  
 end

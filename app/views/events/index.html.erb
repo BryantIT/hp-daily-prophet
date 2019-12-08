@@ -1,21 +1,14 @@
+<%= render partial: "nav" %>
 <div class="vintage__container">
 
+  <a name="top"></a>
+
   <% @events.each do |n| %>
-  <ul>
-    * <%= n.newsletter.title %> -
-    Edition: <%= n.newsletter.sub_title %> -
-    <%= n.title %> -
-    Author: <%= n.date %> -
-    <% if n.photo.attached? %>
-      <%= image_tag url_for(n.photo), :class=> "edit-box" %>
-    <% else %>
-      <div>No Image</div>
-    <% end %>
-    <%= link_to "Review", event_path(n.id) %>
-
-  </ul>
-
+    <ul>
+      * <%= n.newsletter.title %> -
+      Edition: <%= n.newsletter.sub_title %> -
+      <%= n.title %> -
+      Date: <%= n.date.strftime("%m/%d/%Y") %> -
+      <%= link_to "Review", event_path(n.id) %>
+    </ul>
   <% end %>
-
-  <li class="retro-font-last"><%= link_to "Create New", new_event_path %></li>
-  </div>

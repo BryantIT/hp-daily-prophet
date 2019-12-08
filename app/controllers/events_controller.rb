@@ -18,7 +18,6 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    @event.byline = current_user.last_name
 
     if @event.save
       redirect_to @event
@@ -49,6 +48,6 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:title, :date, :body, :photo)
+    params.require(:event).permit(:title, :date, :body, :photo, :newsletter_id)
   end
 end
