@@ -37,6 +37,8 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 # https://github.com/zquestz/omniauth-google-oauth2
 gem 'omniauth-google-oauth2'
+gem 'omniauth-github'
+gem 'activerecord-session_store'
 gem 'faker'
 
 group :development, :test do
