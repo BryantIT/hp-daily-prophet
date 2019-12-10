@@ -4,8 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :omniauthable, omniauth_providers: [:facebook, :github, :google_oauth2]
 
-         validates :password, length: { in: 6..128 }, on: :create
-           validates :password, length: { in: 6..128 }, on: :update, allow_blank: true
+validates: :email, uniqueness: true, presence: true
+validates: :title, length: {minimum: 6}
+validates: :body, length: {minimum: 20}
 
 has_one_attached :avatar
 has_many :newsletters
