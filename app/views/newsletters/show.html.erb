@@ -5,12 +5,14 @@
   <p><%= @newsletter.summary %></p>
   <author>Author Name</author>
 
+  <span class="retro-font-last"><%= link_to "Edit", edit_newsletter_path %> - </span>
+  <span class="retro-font-last"><%= link_to "Delete", newsletter_path(@newsletter),
+    :data => {:confirm => "Are you sure?",
+    :method => "delete"} %></span>
+  <h3 class="retro-font-last"><%= link_to "Add a new article", new_newsletter_article_path(@newsletter) %></h3>
+
   <h2>Articles in this newsletter</h2>
+
   <% @newsletter.articles.each do |article| %>
     <h3><%= link_to article.title, newsletter_article_path(@newsletter, article) %></h3>
   <% end %>
-
-  <span class="retro-font-last"><%= link_to "Edit", edit_newsletter_path %> - </span>
-  <span class="retro-font-last"><%= link_to "Delete", newsletter_path(@newsletter),
-                         :data => {:confirm => "Are you sure?",
-                         :method => "delete"} %></span>
