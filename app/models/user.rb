@@ -2,8 +2,10 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook, :github, :google_oauth2]
+         :recoverable, :rememberable, :omniauthable, omniauth_providers: [:facebook, :github, :google_oauth2]
 
+         validates :password, length: { in: 6..128 }, on: :create
+           validates :password, length: { in: 6..128 }, on: :update, allow_blank: true
 
 has_one_attached :avatar
 has_many :newsletters
@@ -30,4 +32,5 @@ def self.create_from_provider_data(provider_data)
   def print_name
     @print_name = "#{self.first_name[0]}. #{self.last_name}"
   end
+
 end

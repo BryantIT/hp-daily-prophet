@@ -111,8 +111,7 @@ p:hover {
  -webkit-border-radius: 100px;
  -moz-border-radius: 100px;
  border: 2px solid blue;
-
-
+ position: relative;
 }
 
 .center-wrapper {

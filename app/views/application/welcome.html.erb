@@ -1,1 +1,9 @@
 
+<section class="text">
+  <% if user_signed_in? %>
+  <h4>Welcome to your Newsletter</h4>
+  <h5><span class="fontawesome-star star"></span> <span><%= current_user.full_name %></span> <span class="fontawesome-star star"></span></h5>
+  <% else  %>
+  <h4>Welcome, please sign in</h4>
+  <% end %>
+</section>
