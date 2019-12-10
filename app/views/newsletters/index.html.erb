@@ -4,7 +4,8 @@
   <% @newsletters.each do |n| %>
   <ul>
     * <%= n.title %> - <%= n.sub_title %> -
-    <%= link_to "Review", newsletter_path(n.id) %>
+    <%= link_to "Review", newsletter_path(n.id) %> ||
+    <%= link_to "Articles", newsletter_articles_path(n.id) %>
   </ul>
 
   <% end %>

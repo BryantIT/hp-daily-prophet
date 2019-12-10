@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :events
   resources :articles
-  resources :newsletters
+  resources :newsletters do
+    resources :articles, only: [:index, :show]
+  end
   root to: 'application#welcome'
   devise_for :users, path: 'users', :controllers => {registrations: 'registrations', omniauth_callbacks: 'omniauth'},
   :path_names => {

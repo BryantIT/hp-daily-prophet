@@ -1,6 +1,6 @@
 module NewslettersHelper
-  def newletter_event_date
-    @newletter.date.strftime("%m/%d/%Y")
+  def newsletter_event_date
+    @newsletter.date.strftime("%m/%d/%Y")
   end
 
 
