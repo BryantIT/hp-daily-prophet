@@ -16,10 +16,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    binding.pry
     @article = Article.new(article_params)
     @article.byline = current_user.last_name
-    binding.pry
     if @article.save
       redirect_to @article
     else

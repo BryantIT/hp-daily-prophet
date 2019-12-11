@@ -5,8 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :omniauthable, omniauth_providers: [:facebook, :github, :google_oauth2]
 
 validates :email, uniqueness: true, presence: true
-validates :title, length: {minimum: 6}
-validates :body, length: {minimum: 20}
+
 
 has_one_attached :avatar
 has_many :newsletters
