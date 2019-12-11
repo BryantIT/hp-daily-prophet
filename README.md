@@ -43,3 +43,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * **Silke V** - *Splash page template* - [Silke V](https://codepen.io/silkine)
+* **Kevin Nagata** - *Front page template* - [Kevin Nagata](https://codepen.io/ikevin)
