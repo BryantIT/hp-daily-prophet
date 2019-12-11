@@ -1,7 +1,11 @@
 class NewslettersController < ApplicationController
 
   def index
-    @newsletters = Newsletter.all
+    if params[:user_id].present?
+        @newsletters = Newsletter.my_newsletters(params[:user_id])
+    else
+        @newsletters = Newsletter.all
+    end
   end
 
   def new

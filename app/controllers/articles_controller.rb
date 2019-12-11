@@ -46,6 +46,9 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
 
+  def my_articles
+    @articles = Article.my_articles(current_user)
+  end
 
   private
   def article_params

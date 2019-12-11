@@ -4,14 +4,15 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :omniauthable, omniauth_providers: [:facebook, :github, :google_oauth2]
 
-validates: :email, uniqueness: true, presence: true
-validates: :title, length: {minimum: 6}
-validates: :body, length: {minimum: 20}
+validates :email, uniqueness: true, presence: true
+validates :title, length: {minimum: 6}
+validates :body, length: {minimum: 20}
 
 has_one_attached :avatar
 has_many :newsletters
+has_many :articles
 has_many :articles, through: :newsletters
-has_many :events, through: :articles
+has_many :events, through: :newletters
 
 def self.create_from_provider_data(provider_data)
     where(provider: provider_data.provider, uid: provider_data.uid).first_or_create do | user |

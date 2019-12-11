@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'articles/my_articles', to: 'articles#my_articles'
   resources :events
   resources :articles
   resources :newsletters do

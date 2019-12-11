@@ -1,6 +1,11 @@
 <%= render partial: "nav" %>
 <div class="vintage__container">
 
+  <%= form_tag "/newsletters", method: "GET" do %>
+    <%= select_tag :user_id, options_from_collection_for_select(User.all, :id, :full_name), prompt: "Select a user" %>
+    <%= submit_tag "Filter" %>
+  <% end %>
+
   <% @newsletters.each do |n| %>
   <ul>
     * <%= n.title %> - <%= n.sub_title %> -
