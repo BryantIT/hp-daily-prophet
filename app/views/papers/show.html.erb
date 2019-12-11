@@ -1,0 +1,30 @@
+<div class="head">
+    <div class="headerobjectswrapper">
+        <div class="weatherforcastbox"><span style="font-style: italic;">Repello Muggletum</span><br><span>This item is protected against muggle viewing</span><br>
+          <span><%= link_to "Home", root_path %></span> || <span><%= link_to "Back", papers_path %></span></div>
+        <header><%= @newsletter.title %></header>
+    </div>
+
+    <div class="subhead"><%= @newsletter.sub_title %> || <%= newsletter_event_date %></div>
+</div>
+
+<div class="content">
+    <div class="collumns">
+      <% @newsletter.articles.each do |n| %>
+        <div class="collumn">
+
+            <div class="head"><span class="headline hl3"><%= n.title %></span><p><span class="headline hl4">by <%= n.byline %></span></p></div>
+
+            <% if n.photo.attached? %>
+            <%= image_tag url_for(n.photo), :class => "media"%>
+            <% else %>
+            <h3></h3>
+          <% end %>
+
+            <p><%= n.body %></p></div>
+
+        <% end %>
+        <div class="collumn">
+          </div>
+        </div>
+        </div>

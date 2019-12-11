@@ -1,0 +1,7 @@
+<% @newsletters.each do |n| %>
+<ul style="text-align:center;">
+  * <%= n.title %> - <%= n.sub_title %> -
+  <%= link_to "Show", paper_path(n.id) %>
+</ul>
+
+<% end %>

@@ -1,6 +1,5 @@
 class Article < ApplicationRecord
   belongs_to :newsletter
-  belongs_to :user
   has_one_attached :photo
 
   validates :title, :body, presence: true
@@ -8,6 +7,6 @@ class Article < ApplicationRecord
   validates :body, length: {minimum: 20}
 
 
-  
+
 
 end

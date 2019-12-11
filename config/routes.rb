@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :papers
   resources :events
   resources :articles
   resources :newsletters do

@@ -20,18 +20,18 @@
 #     Newsletter.create(
 #       title: Faker::Book.title,
 #       sub_title: Faker::Lorem.sentence(word_count: 6),
-#       publish_date: Faker::Date.backward(days: 14),
+#       date: Faker::Date.backward(days: 14),
 #       summary: Faker::Lorem.paragraph(sentence_count: 4),
-#       user_id: rand(20..25)
+#       user_id: 44
 #     )
 # end
 
 10.times do
     Article.create(
       title: Faker::Book.title,
-      byline: Faker::Name.name,
-      body: Faker::Lorem.paragraph(sentence_count: 4),
-      newsletter_id: rand(10..17),
+      byline: "Richards",
+      body: Faker::Lorem.paragraph(sentence_count: 5),
+      newsletter_id: 29,
     )
 end
 
