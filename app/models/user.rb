@@ -10,7 +10,6 @@ validates :body, length: {minimum: 20}
 
 has_one_attached :avatar
 has_many :newsletters
-has_many :articles
 has_many :articles, through: :newsletters
 has_many :events, through: :newletters
 
@@ -22,6 +21,8 @@ def self.create_from_provider_data(provider_data)
       user.password = Devise.friendly_token[0, 20]
     end
   end
+
+
 
   def full_name
     @full_name = "#{self.first_name} #{self.last_name}"
