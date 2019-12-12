@@ -22,6 +22,8 @@ bundle install
 
 It should be ready to deploy out of the box.  Follow the instructions from the service you wish to deploy on.
 
+You'll need to replace the Oauth and AWS credentials with your own. Please see the documentation for each on how to do this. Then add your credentials to the credentials.yml.enc file.
+
 ## Built With
 
 * [Rails]
